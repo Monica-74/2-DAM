@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+        <hibernate-configuration>  <!-- Configuración de Hibernate -->
+        <session-factory> <!-- Especifica el controlador de conexión a la base de datos -->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property> <!-- URL de conexión a la base de datos MySQL -->
+        <property name="connection.url">jdbc:mysql://127.0.01:3306/world</property>  <!-- Nombre de usuario para la conexión a la base de datos -->
+        <property name="connection.username">usr</property> <!-- Contraseña para la conexión a la base de datos -->
+        <property name="connection.password">pwd</property> <!-- Dialecto de Hibernate para MySQL -->
+        <property name="dialect">org.hibernate.dialect.Mysql5Dialect</property> <!-- Muestra las sentencias SQL generadas por Hibernate en la consola -->
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping resource="Dim_Language.hbm.xml"/>  <!-- Mapeo de recursos y clases. Archivo de mapeo para la clase Dim_Language-->
+        <mapping class="org.example.Dim_Language"/> <!-- Clase Java Dim_Language -->
+        <mapping resource="City.hbm.xml"/> <!-- Archivo de mapeo para la clase City -->
+        <mapping class="org.example.city"/> <!-- Clase Java City -->
+        </session-factory>
+        </hibernate-configuration>
+
+<!-- Este archivo de configuración de Hibernate define cómo se conecta la aplicación a una base de datos MySQL, especificando el controlador,
+ la URL de conexión, el nombre de usuario y la contraseña. También define el dialecto de SQL que Hibernate debe usar para comunicarse con la
+  base de datos. Además, incluye configuraciones para mostrar las sentencias SQL generadas y los mapeos de las clases Java a las tablas de la
+  base de datos.-->

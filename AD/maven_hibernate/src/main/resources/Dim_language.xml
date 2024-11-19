@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+        <hibernate-mapping>  <!-- Mapeo de la clase Java a la tabla de la base de datos -->
+        <class name="org.example.Dim_Language" table="dim_Language"> <!-- Descripción de la clase para documentación -->
+        <meta attribute="class-description">  <!-- Esta clase contiene la dimensión de lenguaje -->
+        This class contains the language dimension
+        </meta>
+        <id name="LanguageCode" type="int" column="LanguageCode">  <!-- Mapeo del identificador único de la clase -->
+        <generator class="assigned"/>  <!-- El generador 'assigned' indica que el valor del ID se asigna manualmente -->
+        </id>
+        <property name = "Language" column="Language" type="string"/>  <!-- Mapeo de la propiedad 'Language' a la columna correspondiente en la base de datos -->
+        <property name ="created_dt" column="created_dt" type="LocalDateTime"/>  <!-- Mapeo de la propiedad 'created_dt' a la columna correspondiente en la base de datos -->
+        <property name ="update_dt" column="update_dt" type="LocalDateTime"/> <!-- Mapeo de la propiedad 'update_dt' a la columna correspondiente en la base de datos -->
+
+        </class>
+        </hibernate-mapping>

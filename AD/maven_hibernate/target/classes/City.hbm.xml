@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+        <hibernate-mapping> <!-- Mapeo de la clase Java a la tabla de la base de datos -->
+        <class name="org.example.city" table="city"> <!-- Descripción de la clase para documentación -->
+        <meta attribute="class-description"> <!-- Esta clase contiene los detalles de la ciudad -->
+        This class contains the city detail.
+        </meta> <!-- Mapeo del identificador único de la clase -->
+        <id name="ID" type="int" column="ID"> <!-- El generador 'increment' indica que el valor del ID se incrementa automáticamente -->
+        <generator class="increment"/>
+        </id>
+        <property name = "Name" column="Name" type="string"/> <!-- Mapeo de la propiedad 'Name' a la columna correspondiente en la base de datos -->
+        <property name ="CountryCode" column="CountryCode" type="string"/>  <!-- Mapeo de la propiedad 'CountryCode' a la columna correspondiente en la base de datos -->
+        <property name ="District" column="District" type="string"/> <!-- Mapeo de la propiedad 'District' a la columna correspondiente en la base de datos -->
+        <property name ="Population" column="Population" type="int"/>
+
+
+        </class>
+        </hibernate-mapping>
