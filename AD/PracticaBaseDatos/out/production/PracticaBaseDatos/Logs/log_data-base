@@ -1,0 +1,4 @@
+20241016_194507-I-Iniciando ejecución
+20241016_194507-I-
+20241016_194507-I-
+20241016_194507-I-lanzando consultaSELECT Code, Name, Continent FROM world.country LIMIT 5;
