@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Configuramos la conexión a la base de datos -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://127.0.0.1:3306</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">1234</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>     <!--lenguaje de la base de datos -->
+        <property name="hibernate.show_sql">true</property>
+
+        <mapping resource="Categoria.hbm.xml"/>
+        <mapping class="org.example.Categoria"/>
+        <mapping resource="Producto.hbm.xml"/>
+        <mapping class="org.example.Producto"/>
+        <mapping resource="Proveedor.hbm.xml"/>
+        <mapping class="org.example.Proveedor"/>
+
+    </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/xsd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="org.example.Proveedor" table="Proveedor"> <!-- describe la clase en el atributo-->
+        <meta attribute="class-description"> <!--se utiliza para dar metadatos adicionales a la clase mapeada-->
+            Esta clase contiene la tabla de proveedores de los productos almacenados.
+        </meta>
+        <id name="idProveedor" type="int" column="idProveedor">
+            <generator class="increment"/>
+        </id>
+        <property name="nombreComercial" column="nombreComercial" type="string"/>
+        <property name="emailContacto" column="emailContacto" type="string"/>
+        <property name="cif" column="cif" type="string"/>
+        <property name="idProducto" column="idProducto" type="int"/>
+        <property name="idCategoria" column="idCategoria" type="int"/>
+
+    </class>
+</hibernate-mapping>
+
+
+
