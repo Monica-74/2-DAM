@@ -14,8 +14,9 @@
         <property name="nombreComercial" column="nombreComercial" type="string"/>
         <property name="emailContacto" column="emailContacto" type="string"/>
         <property name="cif" column="cif" type="string"/>
-        <property name="idProducto" column="idProducto" type="int"/>
-        <property name="idCategoria" column="idCategoria" type="int"/>
+
+        <many-to-one name="idProducto" class="org.example.Producto" column="idProducto" not-null="true"/>
+        <many-to-one name="idCategoria" class="org.example.Categoria" column="idCategoria" not-null="true"/>
 
     </class>
 </hibernate-mapping>
