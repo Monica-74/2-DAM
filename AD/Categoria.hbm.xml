@@ -15,9 +15,10 @@
         <property name="alimentosCongelados" column="alimentosCongelados" type="string"/>
         <property name="alimentosRefrigerados" column="alimentosRefrigerados" type="string"/>
         <property name="alimentosFrescos" column="alimentosFrescos" type="string"/>
-        <property name="idProveedor" column="idProveedor" type="int"/>
-        <property name="idProducto" column="idProducto" type="int"/>
+<!--        Mapeo de las claves foráneas -->
+        <many-to-one name="idProveedor" class="org.example.Proveedor" column="idProveedor" not-null="true"/> <!--indica una relación de clave foránea con la tabla esta-->
+        <many-to-one name="idProducto" class="org.example.Producto" column="idProducto" not-null="true"/> <!--name es el nombre del atributo, class el de la clase y column el nombre de la columna
+        y not-null indica si la relación es obligatoria que en este caso hemos dicho que sea siempre verdadera.-->
 
     </class>
 </hibernate-mapping>
-
