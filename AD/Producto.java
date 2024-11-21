@@ -14,7 +14,6 @@ public class Producto {
     private int IdProveedor;
     private int IdCategoria;
     private int idProducto;
-    private List<Producto>Productos = new ArrayList<>();
 
     public String getNombreProducto() {
         return nombreProducto;
