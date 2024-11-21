@@ -14,8 +14,9 @@
         <property name="nombreProducto" column="nombreProducto" type="string"/>
         <property name="precio" column="precio" type="float"/>
         <property name="cantidad" column=" cantidad" type="int"/>
-        <property name="IdProveedor" column="IdProveedor" type="int"/>
-        <property name="idCategoria" column="idCategoria" type="int"/>
+
+        <many-to-one name="idProveedor" class="org.example.Proveedor" column="idProveedor" not-null="true"/>
+        <many-to-one name="idCategoria" class="org.example.Categoria" column="idCategoria" not-null="true"/>
 
     </class>
 </hibernate-mapping>
